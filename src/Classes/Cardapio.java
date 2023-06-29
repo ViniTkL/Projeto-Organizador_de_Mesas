@@ -14,7 +14,6 @@ public class Cardapio {
         cardapioNomes.add("Iscas de carne");
         cardapioNomes.add("Bife acebolado");
         cardapioNomes.add("Filé de frango a milanesa");
-        cardapioNomes.add("Filé de frango a milanesa");
         cardapioNomes.add("Filé a parmegiana");
         cardapioNomes.add("Caeser Salad");
         cardapioNomes.add("Espaguete ao alho e óleo");

@@ -105,6 +105,9 @@ public class FuncoesSuporte {
                     volta = 1;
                 }
                if(numeroItem > 0){
+                   int pos= cardapio.posicao(numeroItem);
+                   String nome = cardapio.getNome(pos);
+                   System.out.printf("Item escolhido: %d  %s\n",numeroItem,nome);
                 //sup pega o valor retornado para conferir se a operação foi feita com sucesso ou ela falhou/foi interrompida pelo usuário
                 sup = itemDesejado(numeroItem,a);}
 
@@ -126,8 +129,8 @@ public class FuncoesSuporte {
         int qntd =0, volta =0, escolhaOpc;
 
         int pos = cardapio.posicao(numeroItem);
-
-        System.out.printf("\nItem: %d\n“Este é o item que deseja? 1 – para Sim e 2 –para Não\nEscolha: ",numeroItem);
+        String nome = cardapio.getNome(pos);
+        System.out.printf("\nItem: %d - %s\n“Este é o item que deseja? 1 – para Sim e 2 –para Não\nEscolha: ",numeroItem,nome);
         escolhaOpc = lt.nextInt();
             if(escolhaOpc == 1){
                 System.out.println("Digite a quantidade do item pedido pelo cliente: ");
@@ -577,6 +580,7 @@ public class FuncoesSuporte {
             int j=mesa7.tamanaho();
             for(int i=0;i<j;i++){
                 tot = tot+(mesa7.getPedidoPrecos(i)*mesa7.getPedidoQntd(i));
+
             }
             System.out.printf("Valor total da mesa: R$%.2f ",tot);
         }
@@ -585,12 +589,14 @@ public class FuncoesSuporte {
             for(int i=0;i<j;i++){
                 tot = tot+(mesa8.getPedidoPrecos(i)*mesa8.getPedidoQntd(i));
             }
+
             System.out.printf("Valor total da mesa: R$%.2f ",tot);
         }
         else if(mesa==8){
             int j=mesa9.tamanaho();
             for(int i=0;i<j;i++){
                 tot = tot+(mesa9.getPedidoPrecos(i)*mesa9.getPedidoQntd(i));
+
             }
             System.out.printf("Valor total da mesa: R$%.2f ",tot);
         }
@@ -603,6 +609,39 @@ public class FuncoesSuporte {
         }
         else{
             System.out.println("Valor invalido");
+        }
+    }
+
+    public void limparMesas(int mesa){
+        if(mesa==0){
+            mesa1.limparMesa(mesa);
+        }
+        else if(mesa==1){
+            mesa2.limparMesa(mesa);
+        }
+        else if(mesa==2){
+            mesa3.limparMesa(mesa);
+        }
+        else if(mesa==3){
+            mesa4.limparMesa(mesa);
+        }
+        else if(mesa==4){
+            mesa5.limparMesa(mesa);
+        }
+        else if(mesa==5){
+            mesa6.limparMesa(mesa);
+        }
+        else if(mesa==6){
+            mesa7.limparMesa(mesa);
+        }
+        else if(mesa==7){
+            mesa8.limparMesa(mesa);
+        }
+        else if(mesa==8){
+            mesa9.limparMesa(mesa);
+        }
+        else if(mesa==9){
+            mesa10.limparMesa(mesa);
         }
     }
 

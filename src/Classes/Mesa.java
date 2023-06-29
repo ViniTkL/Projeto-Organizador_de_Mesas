@@ -147,7 +147,7 @@ public class Mesa {
                     //Se a mesa digitada estiver aberta. OBS: Talvez precise de uma função para isso também
 
                     c = suporte.menuNumMesa(copiaMesas,a);}
-                catch(ArrayIndexOutOfBoundsException e){
+                catch(Exception e){
 
                 }
                 if( c ==1){
@@ -243,6 +243,7 @@ public class Mesa {
             System.out.printf("Mesa %d fechada\n", b+1);
             suporte.mostrarPedidosMesas(b);
             suporte.valorTotalDasMesas(b);
+            suporte.limparMesas(b);
             try{
             System.out.println("\n\tPressione qualquer tecla para voltar ao menu principal: ");
 

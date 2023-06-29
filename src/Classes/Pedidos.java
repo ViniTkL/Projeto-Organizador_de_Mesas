@@ -69,5 +69,11 @@ public class Pedidos {
 
 
     }
+    public void limparMesa(int mesa){
+        pedidoNumero.clear();
+        pedidoQntd.clear();
+        pedidoNome.clear();
+        pedidoPrecos.clear();
 
+    }
 }
